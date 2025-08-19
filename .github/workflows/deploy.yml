@@ -17,13 +17,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'
+          cache-dependency-path: ./client/package-lock.json
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         working-directory: ./client
 
       - name: Build project
-        run: npm run build
+        run:  |
+          export NODE_OPTIONS="--max_old_space_size=4096"
+          npm run build
         working-directory: ./client
 
       - name: Deploy to GitHub Pages
