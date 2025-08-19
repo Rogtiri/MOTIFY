@@ -1,0 +1,78 @@
+.serviceContainer{
+    padding: 40px 16px;
+    background-color: #09090b;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (min-width: 760px) {
+  .serviceContainer { padding: 60px 40px; }   /* планшет */
+}
+
+@media (min-width: 1152px) {
+  .serviceContainer { padding: 80px 140px; }  /* 1360px и выше */
+}
+
+@media (min-width: 1600px) {
+  .serviceContainer { padding: 100px 180px; } /* для очень широких */
+}
+.namedBlock{
+    width: 100%;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.descServ{
+    color: grey;
+    font-size: 20px;
+    width: 588px;
+}
+.complexContainer{
+    box-sizing: border-box;
+    padding: 30px 20px;
+    background-color: rgba(249, 115, 22, 0.1);
+    border-radius: 7px;
+}
+
+.descComplex{
+    color: grey;
+    font-weight: 300;
+}
+.priceComplex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.fullPrice{
+    font-size: 30px;
+    color: grey;
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+}
+.smallPrice{
+    font-size: 30px;
+    color: #eb6c36;
+    display: flex;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    border: 0;
+    background-color: #eb6c36;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 7px;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+.btn:hover{
+    transform: scale(1.05);
+}

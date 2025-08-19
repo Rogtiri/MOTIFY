@@ -1,0 +1,90 @@
+.formContainer{
+    height: fit-content;
+    padding: 30px;
+    text-align: left;
+    border: 1px solid #9ca3af;
+    border-radius: 7px;
+    font-size: small;
+}
+.namePhoneContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+@media(max-width: 768px){
+    .namePhoneContainer{
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+}
+.inputPole, .inputPoleEmail, .selectPole, .descPole{
+    all: unset;
+    box-sizing: border-box;
+    border: 1px solid #9ca3af;
+    border-radius: 7px;
+    width: 100%;
+    padding: 6px 10px;
+    margin-bottom: 20px;
+}
+.selectContainer{
+    position: relative;
+}
+.selectPole{
+    color: #9ca3af;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.optionContainer{
+    position: absolute;
+    top: 50px;
+    z-index: 10;
+    box-sizing: border-box;
+    min-width: 100%;
+    width: max-content;
+    padding: 6px 10px;
+    border: 1px solid #9ca3af;
+    background-color: #333342;
+    color: black;
+    border-radius: 7px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;        /* не кликается, когда скрыто */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.option{
+    padding: 5px;
+    border-radius: 3px;
+}
+.option:hover{
+    background-color: white;
+}
+.descPole{
+    width: 100%;
+    box-sizing: border-box;
+    height: 80px;
+}
+.btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #f97316;
+    color: white;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    border: 0;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.05);
+}

@@ -1,0 +1,27 @@
+.footerDescContainer{
+    width: 100%;
+    text-align: left;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+}
+.title{
+    color: white;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.description{
+    color: rgb(161, 156, 156);
+}
+.icon{
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform: scale(1);
+}
+.icon:hover{
+    transform: scale(1.2);
+}

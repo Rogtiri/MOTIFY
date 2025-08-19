@@ -1,0 +1,116 @@
+
+.headerContainer{
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.918),
+        rgba(0, 0, 0, 0.363)
+    ),
+    url('../../assets/back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.context{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 16px;
+}
+@media (min-width: 760px) {
+  .context { padding: 60px 40px; }   /* планшет */
+}
+
+@media (min-width: 1152px) {
+  .context { padding: 80px 140px; }  /* 1360px и выше */
+}
+
+@media (min-width: 1600px) {
+  .context { padding: 100px 180px; } /* для очень широких */
+}
+
+.textContext{
+    position: relative;
+    text-align: left;
+    color: white;
+    opacity: 0;
+    transform: translateX(-200px);
+    animation: slideright 1s ease forwards;
+}
+.expertBlock{
+    background-color: #eb6c36;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.nameBlock{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+.autoText{
+    height: 128px;
+    margin-top: 20px;
+}
+.buttonOrder{
+  margin-top: 40px;
+  border: none;
+  background-color: #eb6c36;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+}
+.arrow{
+  transform: translateX(0px);
+  transition: all 0.3s ease-in;
+}
+.buttonOrder:hover .arrow{
+  transform: translateX(5px);
+}
+.photoConteiner{
+    margin-top: 60px;
+    width: 511px;
+    height: 280px;
+    opacity: 0;
+    transform: translateX(200px);
+    animation: slideleft 1s ease forwards;
+}
+.photo{
+  border: 4px solid #eb6c36;
+  border-radius: 50%;
+  width: 50%;
+  height: auto;
+}
+.mouse{
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  animation: upDown 2s ease-in-out infinite;
+}
+@keyframes upDown {
+  0%   { transform: translateY(0); opacity: 0;}
+  50%  { transform: translateY(-20px);  opacity: 1;}
+  100% { transform: translateY(0);  opacity: 0; }
+}
+@keyframes slideleft {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes slideright {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@media (max-width: 1020px){
+  .photoConteiner{
+    display: none;
+  }
+}

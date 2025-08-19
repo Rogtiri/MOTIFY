@@ -1,0 +1,64 @@
+.navContainer{
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 16px;
+    background-color: black;
+    border-bottom: 1px solid rgba(125, 125, 185, 0.493);
+    z-index: 10;
+}
+.logoContainer{
+    display: flex;
+    align-items: center;
+}
+.title{
+    color: white;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.linkContainer{
+    display: none;
+    align-items: center;
+    gap: 20px;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease-out ;
+}
+.linkContactContainer{
+    display: none;
+    align-items: center;
+    gap: 5px;
+}
+.linkContact{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease-out;
+}
+.icon{
+    color: white;
+    width: 14px;
+}
+.link:hover, .linkContact:hover{
+    color: #FF6B00;
+}
+@media (min-width: 760px) {
+  .navContainer { padding: 5px 40px; }
+  .linkContainer{ display: flex;}/* планшет */
+}
+
+@media (min-width: 1152px) {
+  .navContainer { padding: 5px 140px; }
+  .linkContactContainer{ display: flex;} /* 1360px и выше */
+}
+
+@media (min-width: 1600px) {
+  .navContainer { padding: 5px 180px; } /* для очень широких */
+}   

@@ -1,0 +1,27 @@
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.App {
+  text-align: center;
+  margin: 0;
+}
+.scrollUp{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  text-decoration: none;
+  color: white;
+  background-color: #eb6c36;
+  border-radius: 50%;
+  padding: 12px 15px;
+  z-index: 10;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+.scrollUp:hover{
+  box-shadow: 0 0 10px rgba(235, 108, 54, 0.6);
+  transform: scale(1.2);
+}
