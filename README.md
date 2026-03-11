@@ -1,0 +1,107 @@
+# MOTIFY
+
+MOTIFY is a comprehensive full-stack application designed for a professional car selection and purchasing assistance service. It features a modern, responsive client-facing website built with React and a powerful backend powered by Node.js, which includes an integrated Telegram bot for seamless order management by the service administrator.
+
+## Features
+
+-   **Client-Facing Website**: A responsive single-page application built with React and Vite that allows potential customers to:
+    -   View available services, such as vehicle search, full inspection, and transaction support.
+    -   Learn about the advantages of the service and the step-by-step process.
+    -   Read answers to frequently asked questions.
+    -   Submit a detailed order for a car selection service through an intuitive form.
+
+-   **Backend Server**: An Express.js server that:
+    -   Connects to a MongoDB database to persist order information.
+    -   Provides an API endpoint to receive new orders from the client website.
+    -   Serves the static, production-ready React application.
+
+-   **Telegram Bot Integration**: A key feature for the administrator to manage incoming orders efficiently:
+    -   Receives real-time notifications for every new order submitted.
+    -   Provides an interactive menu to view, accept, reject, and manage orders.
+    -   Allows for editing order details (e.g., budget, car preferences, notes) directly within Telegram.
+    -   Tracks the status of each order (new, in progress, rejected, completed).
+    -   Generates reports on completed orders.
+
+## Tech Stack
+
+-   **Frontend**: React, Vite, CSS Modules, `react-intersection-observer`
+-   **Backend**: Node.js, Express.js
+-   **Database**: MongoDB with Mongoose
+-   **Bot**: `node-telegram-bot-api`
+
+## Project Structure
+
+The repository is organized into two main directories:
+
+-   `client-vite/`: Contains the complete source code for the React frontend application.
+-   `server/`: Contains the Node.js backend, including the Express server, Mongoose models, and all Telegram bot logic.
+
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+-   Node.js (v18 or newer)
+-   npm (Node Package Manager)
+-   A running MongoDB instance (local or cloud)
+-   A Telegram Bot Token from BotFather
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/Rogtiri/MOTIFY.git
+    cd MOTIFY
+    ```
+
+2.  **Set up the Backend:**
+    -   Navigate to the server directory:
+        ```sh
+        cd server
+        ```
+    -   Install NPM packages:
+        ```sh
+        npm install
+        ```
+    -   Create a `.env` file in the `server` directory and add the following environment variables:
+        ```env
+        MONGOURI=your_mongodb_connection_string
+        BOT_API=your_telegram_bot_token
+        CHATID=your_telegram_chat_id
+        ```
+    -   Start the backend server:
+        ```sh
+        npm start
+        ```
+    The server will start on `http://localhost:3000`.
+
+3.  **Set up the Frontend:**
+    -   Open a new terminal and navigate to the client directory:
+        ```sh
+        cd client-vite
+        ```
+    -   Install NPM packages:
+        ```sh
+        npm install
+        ```
+    -   For development, start the Vite dev server:
+        ```sh
+        npm run dev
+        ```
+       The application will be accessible at `http://localhost:5173` (or another port if 5173 is in use). The dev server will proxy API requests to your backend at `http://localhost:3000`.
+
+    -   For production, build the static files:
+        ```sh
+        npm run build
+        ```
+        The production-ready files will be generated in `client-vite/dist`. The Express server is pre-configured to serve these static files when running in a production environment.
+
+## Usage
+
+1.  A user navigates to the website and fills out the order form in the "Замовити підбір" section.
+2.  Upon submission, the form data is sent to the backend API.
+3.  The server saves the new order details to the MongoDB database.
+4.  A formatted notification message with the order details is instantly sent to the administrator's Telegram chat via the bot.
+5.  The administrator can use the inline keyboard buttons in Telegram (`Взяти в роботу`, `Відмовитись від роботи`) to manage the new order.
+6.  The main keyboard menu in the bot allows the administrator to view active orders, rejected orders, and reports, as well as edit or complete a a task.
