@@ -1,0 +1,107 @@
+.howItWorkContainer{
+    background-color: #09090b;
+    padding: 40px 16px;
+    color: white;
+}
+.title{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.desc{
+    margin: 0;
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.gridContainder{
+    display: grid;
+    grid-auto-flow: column; /* элементы будут идти в одну строку */
+    grid-auto-columns: 1fr; 
+    gap: 10px;
+    box-sizing: border-box;
+}
+.block{
+    border: 1px solid #1e2939;
+    border-radius: 10px;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+}
+.icon{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+    margin-bottom: 15px;
+}
+.number{
+    background-color: #f97316;
+    border-radius: 50%;
+    padding: 3px 8px;
+    margin-bottom: 17px;
+}
+.titleBlock{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 17px;
+}
+.actionBlock, .descBlock{
+    color: grey;
+    margin: 0;
+}
+.actionBlock{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+.descBlock{
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.block:hover{
+    transform: translateY(-10px);
+    border: 1px solid #f97316;
+}
+.block:hover .icon{
+    background-color: rgba(228, 83, 25, 0.212);
+}
+
+
+
+
+@media (min-width: 760px) {
+  .howItWorkContainer { padding: 60px 40px; }   /* планшет */
+}
+
+@media (min-width: 1152px) {
+  .howItWorkContainer { padding: 80px 140px; }  /* 1360px и выше */
+}
+
+@media (min-width: 1600px) {
+  .howItWorkContainer { padding: 100px 180px; } /* для очень широких */
+}
+@media (max-width: 759px) {
+  .gridContainder {
+    grid-auto-flow: row; /* элементы будут идти в одну колонку */
+    grid-auto-columns: auto; 
+    grid-template-columns: 1fr 1fr; /* две колонки */
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .gridContainder {
+    grid-template-columns: 1fr; /* одна колонка */
+    gap: 10px;
+  }
+}

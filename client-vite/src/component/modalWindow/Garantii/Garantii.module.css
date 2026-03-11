@@ -1,0 +1,195 @@
+/* Задній фон модального вікна */
+.modalContainer{
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.8);
+	position: fixed;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+}
+/* Модальне вікно */
+.container{
+	display: flex;
+	width: 40vw;
+  height: 60vh;
+	background-color: #000000;
+  border: 1px solid #1a2431;;
+	flex-direction: column;
+	position: fixed;
+  left: 50%;
+  top: 15%;
+	transform: translateX(-50%);
+	z-index: 1000;
+  border-radius: 10px;
+}
+/* Шапка модального вікна */
+.titleContainer{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1a2431;
+    background-color: #09090b;
+    padding: 25px 30px;
+}
+/* Стилі іконки в шапці */
+.img{
+    background-color: #22130e;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+}
+/* Інформативна частина модалки */
+.description{
+    overflow-y: auto;
+    padding: 0 20px;
+}
+/* Стилізація скрола */
+.description::-webkit-scrollbar{
+  width:8px;
+}
+.description::-webkit-scrollbar-track{
+  background:#121212;
+  border-radius:10px;
+}
+.description::-webkit-scrollbar-thumb{
+  background:#f05a28;
+  border-radius:10px;
+}
+.description::-webkit-scrollbar-thumb:hover{
+  background:#d14920;
+}
+
+/* Стилі Заголовка шапки */
+.titleModal{
+	font-size: 18px;
+    color: white;
+    margin: 0;
+}
+/*  Іконка закрити*/
+.icons{
+	cursor: pointer;
+    color: grey;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+/* Заголовки інформативної частини */
+.title{
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 18px;
+    margin-top: 20px;
+}
+/* Блок з інформацією */
+.descBlock{
+    display: flex;
+    gap: 10px;
+    background-color: #18181b;
+    border: 1px solid #1a2431;
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+/* Іконка в блоці */
+.icon{
+    width: 50px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+}
+/* Список */
+.list{
+    color: grey;
+    margin: 0;
+    padding-left: 5px;
+    margin-top: 15px;
+    list-style-type: none;
+}
+.list li{
+    margin-bottom: 10px;
+}
+/* Заміна стандартних пунктирів на свої */
+.list li::before{
+    content: "• ";
+    color: #f05a28;
+}
+/* Останій блок з рекомендацією */
+.recommendation{
+    background-color: #031109;
+    border-radius: 10px;
+    border: 1px solid #022f13;
+    font-size: 14px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 15px;
+}
+
+/* Наведення на іконку закрити */
+.icons:hover{
+    transform: scale(1.2);
+    color: white;
+}
+
+/* ===========================АДАПТАЦІЯ+ */
+/* Планшети/лептопи */
+@media (max-width: 1024px) {
+  .container {
+    width: 60vw;         
+    height: 65vh;
+  }
+}
+
+/* Мобільні пристрої (ширина < 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 90vw;          
+    height: 70vh;
+  }
+  .titleContainer {
+    padding: 15px;
+  }
+  .titleModal {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .descBlock {
+    flex-direction: column;
+  }
+  .twoDescBlock {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Малі екрани (< 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 95vw;
+    height: 75vh;
+  }
+  .titleModal {
+    font-size: 14px;
+  }
+  .list li {
+    font-size: 14px;
+  }
+  .recommendation {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

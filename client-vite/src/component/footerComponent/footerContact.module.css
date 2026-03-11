@@ -1,0 +1,22 @@
+.footerContactContainer{
+    width: 245px;
+    text-align: left;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+@media(max-width: 1280px) {
+    .footerContactContainer { width: 186px; }   /* ≥1152px */
+}
+.icon{
+    width: 18px;
+    height: 18px;
+    color: #f97316;
+}
+.infoContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}

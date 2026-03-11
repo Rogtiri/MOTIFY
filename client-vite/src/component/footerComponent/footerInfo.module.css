@@ -1,0 +1,25 @@
+.footerInfoContainer{
+    text-align: left;
+    color: white;
+    width: 245px;
+}
+@media(max-width: 1280px) {
+    .footerInfoContainer { width: 186px; }   /* ≥1152px */
+}
+.list{
+    box-sizing: border-box;
+    color: rgb(161, 156, 156);
+    padding: 0px 10px;
+}
+.link{
+    list-style-type: none;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    transform: translateX(0px);
+    cursor: pointer;
+}
+.link:hover{
+    list-style-type: circle;
+    color: #eb6c36;
+    transform: translateX(5px);
+}
