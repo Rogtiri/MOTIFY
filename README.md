@@ -2,6 +2,9 @@
 
 MOTIFY is a comprehensive full-stack application designed for a professional car selection and purchasing assistance service. It features a modern, responsive client-facing website built with React and a powerful backend powered by Node.js, which includes an integrated Telegram bot for seamless order management by the service administrator.
 
+- Live demo: https://motify-two.vercel.app/
+- Telegram Bot: https://t.me/TestNodeIhorbot
+
 ## Features
 
 -   **Client-Facing Website**: A responsive single-page application built with React and Vite that allows potential customers to:
